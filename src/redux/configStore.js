@@ -36,9 +36,7 @@ const rootReducer = combineReducers({
                 return {...state}
             case "CONFIRMATION":
                 state.confirmation = action.confirmation
-                // console.log(state.user.seats)
                 state.reservedSeats = [...state.reservedSeats, ...state.user.seats]
-                console.log(state.reservedSeats)
                 return {...state}
             default:
                 return {...state}
