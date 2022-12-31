@@ -23,7 +23,7 @@ const rootReducer = combineReducers({
                 return {...state}
             case "SELECTING":
                 state.user.seats = action.mangSeats
-                if(state.user.numberOfSeat === action.mangSeats.length.toString()){
+                if(Number(state.user.numberOfSeat)  === action.mangSeats.length){
                     state.startSelect = false
                     state.enableConfirm = true
                 }
