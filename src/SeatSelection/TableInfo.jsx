@@ -16,7 +16,7 @@ class TableInfo extends Component {
                     <tbody>
                         <tr>
                             <td>{this.props.confirmation? this.props.user.name : ''}</td>
-                            <td>{this.props.confirmation? this.props.user.numberOfSeat : ''}</td>
+                            <td>{this.props.confirmation? this.props.user.seats.length : ''}</td>
                             <td>
                                 {this.props.confirmation? this.props.user.seats.toString() : ''}
                             </td>
