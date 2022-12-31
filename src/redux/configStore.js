@@ -5,9 +5,6 @@ const initialState = {
     disableform: false,
     confirmation: false,
     user: {
-        name: 'Mai Anh Trung',
-        seats: ['A1', 'A2'],
-        numberOfSeat: 0
     },
     reservedSeats: ['A1', 'A2', 'A9', 'B2', 'I6'],
     message: ''
