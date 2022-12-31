@@ -81,7 +81,7 @@ class SeatStructure extends Component {
                     </tbody>
                 </table>
                 <div className='screen'>SCREEN THIS WAY</div>
-                <button onClick={() => {
+                <button disabled={this.props.enableConfirm? '' : 'disabled'} onClick={() => {
                     let action = {
                         type: "CONFIRMATION",
                         confirmation: true
@@ -97,6 +97,7 @@ const mapStateToProps = (rootReducer) => {
     return {
         selectStarting: rootReducer.datVeReducer.startSelect,
         reservedSeats: rootReducer.datVeReducer.reservedSeats,
+        enableConfirm: rootReducer.datVeReducer.enableConfirm,
     }
 
 }

@@ -3,6 +3,7 @@ import { combineReducers, createStore } from "redux";
 const initialState = {
     startSelect: false,
     disableform: false,
+    enableConfirm: false,
     confirmation: false,
     user: {
     },
@@ -26,9 +27,11 @@ const rootReducer = combineReducers({
                 state.user.seats = action.mangSeats
                 if(state.user.numberOfSeat === action.mangSeats.length.toString()){
                     state.startSelect = false
+                    state.enableConfirm = true
                 }
                 else{
                     state.startSelect = true
+                    state.enableConfirm = false
                 }
                 return {...state}
             case "CONFIRMATION":
