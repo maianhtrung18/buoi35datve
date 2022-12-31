@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
 class TableInfo extends Component {
     render() {
         return (
@@ -23,7 +22,6 @@ class TableInfo extends Component {
                         </tr>
                     </tbody>
                 </table>
-
             </div>
         )
     }
