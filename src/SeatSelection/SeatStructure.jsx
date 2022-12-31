@@ -14,7 +14,7 @@ class SeatStructure extends Component {
             for (let i = 0; i < 14; i++) {
                 columnNumber = i < 6 ? i : i === 6 ? -1 : i - 1
                 rowNumber = index < 70 ? index : index === 70 ? -1 : index - 1
-
+                
                 if (rowNumber === 64 && columnNumber === 0) { // 0 0
                     mangSeatHang.push(<td key={`${i}${index}`}></td>)
                 }
@@ -33,8 +33,7 @@ class SeatStructure extends Component {
                 else { //phan tu khac
                     const seat = this.props.reservedSeats.find((reserveSeat) => {
                         return reserveSeat === `${String.fromCharCode(rowNumber)}${columnNumber}`
-                    });
-               
+                    });     
                     if (seat) {
                         mangSeatHang.push(<td key={`${i}${index}`}>
                             <input className='reserveSeat' disabled='disabled' type="checkbox" value={String.fromCharCode(rowNumber) + columnNumber} />
