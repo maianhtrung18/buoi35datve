@@ -9,8 +9,6 @@ const initialState = {
     },
     reservedSeats: ['A1', 'A2', 'A9', 'B2', 'I6'],
     message: ''
-
-
 }
 
 const rootReducer = combineReducers({

@@ -7,9 +7,6 @@ import TableInfo from './TableInfo';
 
 class SeatSelection extends Component {
 
-
-
-
     render() {
         return (
             <div className="container-fluid pageContainer">
@@ -23,9 +20,7 @@ class SeatSelection extends Component {
                     </ul>
                     <p id="notification" style={{textAlign: 'center'}}><b style={{marginBottom: 0, background: '#ff9800', letterSpacing: 1}}>{this.props.message}</b></p>
                     <SeatStructure />
-
                     <TableInfo />
-
                 </div>
                 <div className='footer'>© 2018 Movie Seat Selection . All Rights Reserved | Design by W3layouts</div>
             </div>

@@ -5,16 +5,13 @@ class FormInfo extends Component {
     name = '';
     numberOfSeat = 0;
     render() {
-
-  
         return (
             <>
                 <h3 className='message'>Fill The Required Details Below And Select Your Seats</h3>
                 <div className='pageContentForm'>
                     <div className='pageContentFormLeft'>
                         <label>Name <span>*</span></label>
-                        <input disabled={this.props.disableform? 'disabled' : ''} name='name' onChange={(event) => {
-                            
+                        <input disabled={this.props.disableform? 'disabled' : ''} name='name' onChange={(event) => {        
                             this.name = event.target.value
                         }} type="text" required />
                     </div>
@@ -27,10 +24,8 @@ class FormInfo extends Component {
                             this.numberOfSeat = event.target.value
                         }} type="number" required />
                     </div>
-
                 </div>
-                <button disabled={this.props.disableform? 'disabled' : ''} onClick={() =>{
-                 
+                <button disabled={this.props.disableform? 'disabled' : ''} onClick={() =>{                
                     if(this.name === '' || this.numberOfSeat === 0){
                         alert("Hãy nhập đầy đủ thông tin!")
                     }
@@ -54,6 +49,5 @@ const mapStateToProps = (rootReducer) => {
     }
     
 }
-
 
 export default connect(mapStateToProps)(FormInfo)

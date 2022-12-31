@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 class TableInfo extends Component {
-
-
-
     render() {
         return (
             <div className='tableInfo'>

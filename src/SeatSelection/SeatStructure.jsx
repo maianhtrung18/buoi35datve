@@ -45,11 +45,9 @@ class SeatStructure extends Component {
                             return seat === String.fromCharCode(rowNumber) + columnNumber;
                         })
                         mangSeatHang.push(<td key={`${i}${index}`}>
-                        <input onClick={(event) => {
-                           
+                        <input onClick={(event) => {      
                             if(event.target.checked){
-                                this.seats.push(event.target.value)
-                                
+                                this.seats.push(event.target.value)  
                             }
                             else{
                                 this.seats = this.seats.filter((ele) => {
@@ -60,8 +58,7 @@ class SeatStructure extends Component {
                                 type: 'SELECTING',
                                 mangSeats: this.seats
                             }
-                            this.props.dispatch(action)
-                            
+                            this.props.dispatch(action)             
                         }} disabled={this.props.selectStarting? '' : kq? '' : 'disabled'} type="checkbox" value={String.fromCharCode(rowNumber) + columnNumber} />
                     </td>)
                     }
@@ -71,7 +68,6 @@ class SeatStructure extends Component {
         }
         return mangSeat;
     }
-
 
     render() {
         return (
@@ -100,7 +96,6 @@ const mapStateToProps = (rootReducer) => {
         reservedSeats: rootReducer.datVeReducer.reservedSeats,
         enableConfirm: rootReducer.datVeReducer.enableConfirm,
     }
-
 }
 
 export default connect(mapStateToProps)(SeatStructure);
