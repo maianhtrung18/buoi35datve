@@ -18,8 +18,11 @@ class FormInfo extends Component {
                     <div className='pageContentFormRight'>
                         <label>Number of Seat <span>*</span></label>
                         <input disabled={this.props.disableform? 'disabled' : ''} name='numberOfSeat' onChange={(event) => {
+                            let remainSeat = 120 - this.props.reservedSeats.length
                             if(event.target.value < 0){
                                 event.target.value = 0
+                            }else if(event.target.value > remainSeat){
+                                event.target.value = remainSeat
                             }
                             this.numberOfSeat = event.target.value
                         }} type="number" required />
@@ -45,7 +48,8 @@ class FormInfo extends Component {
 
 const mapStateToProps = (rootReducer) => {
     return {
-        disableform : rootReducer.datVeReducer.disableform
+        disableform : rootReducer.datVeReducer.disableform,
+        reservedSeats: rootReducer.datVeReducer.reservedSeats
     }
     
 }
